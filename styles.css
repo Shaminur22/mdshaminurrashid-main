@@ -147,7 +147,7 @@ a:hover {
 /* Name and Titles */
 .title-container {
     position: absolute;
-    top: 68%;
+    top: calc(50% + 190px);
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
