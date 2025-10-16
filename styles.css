@@ -259,21 +259,19 @@ a:hover {
 
 /* Quote Card */
 .quote-card {
-    width: 80%;
-    max-width: 800px;
-    background: #111;
+    width: 100%;
+    background: rgba(17,17,17,0.9);
     border: 2px solid #00ff00;
-    border-radius: px;
-    padding: 40px;
-    margin: 20px auto;
+    border-radius: 12px;
+    padding: 28px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInQuote 1s 4s forwards;
+    transform: translateY(30px);
+    animation: fadeInQuote 0.8s 4s forwards;
 }
 
 .quote-text {
@@ -298,17 +296,15 @@ a:hover {
 
 /* Action Card */
 .action-card {
-    width: 92%;
-    max-width: 720px;
-    background: #0d0d0d;
+    width: 100%;
+    background: rgba(13,13,13,0.9);
     border: 2px solid #00ff00;
     border-radius: 12px;
-    padding: 22px 24px;
-    margin: 26px auto 10px;
+    padding: 24px;
     text-align: center;
     opacity: 0;
-    transform: translateY(40px);
-    animation: fadeInAction 0.9s 4.2s forwards ease-out;
+    transform: translateY(30px);
+    animation: fadeInAction 0.8s 4.2s forwards ease-out;
 }
 
 .action-text {
@@ -362,6 +358,32 @@ footer {
     border-top: 2px solid #00ff00;
     margin-top: 50px;
     color: #ffffff; 
+}
+/* Home Grid */
+.home-grid {
+    width: 80%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .home-grid {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* Card polish */
+.bio-card, .quote-card, .action-card {
+    backdrop-filter: blur(2px);
+    box-shadow: 0 10px 25px rgba(0,255,0,0.08), inset 0 0 0 rgba(255,255,255,0.02);
+}
+.bio-card:hover, .quote-card:hover, .action-card:hover {
+    box-shadow: 0 14px 34px rgba(0,255,0,0.12), inset 0 0 0 rgba(255,255,255,0.04);
 }
 
 footer p {
