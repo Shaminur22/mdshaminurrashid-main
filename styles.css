@@ -116,9 +116,9 @@ a:hover {
     left: 50%;
     width: 10px;
     height: 10px;
-    background: #00ff00;
+    background: #000000;
     border-radius: 50%;
-    animation: dropPoint 1s forwards, growPoint 1s 1s forwards;
+    animation: none;
 }
 
 @keyframes dropPoint {
