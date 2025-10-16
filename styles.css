@@ -1502,3 +1502,64 @@ footer p {
     60% { opacity: 1; transform: translateY(0) scale(1.02); text-shadow: 0 0 16px rgba(0,255,140,0.5); }
     100% { opacity: 1; transform: translateY(0) scale(1); text-shadow: 0 0 8px rgba(0,255,140,0.35); }
 }
+
+:root{
+    --bg-deep:#030b10;
+    --bg-mid:#071a22;
+    --bg-accent:#091d15;
+    --neon:#00ff66;
+    --neon-2:#00d0a0;
+    --btn-text:#061d06;
+    --text:#e6ffee;
+}
+
+body{ color: var(--text); }
+
+/* Primary button token */
+.button-primary{
+    background: linear-gradient(180deg, var(--neon) 0%, var(--neon-2) 100%);
+    color: var(--btn-text);
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(0,255,100,0.25);
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.button-primary:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 10px 24px rgba(0,255,100,0.35);
+}
+.button-primary:active{
+    transform: translateY(0);
+}
+
+/* Map existing buttons to the primary style */
+.action-button,
+.footer-button,
+.back-to-home,
+.back-to-about,
+.github-button,
+.profile-button1,
+.profile-button2,
+.course-button,
+.platform-button { 
+    background: linear-gradient(180deg, var(--neon) 0%, var(--neon-2) 100%) !important; 
+    color: var(--btn-text) !important; 
+    border: 0 !important; 
+}
+
+.footer-button:hover,
+.back-to-home:hover,
+.back-to-about:hover,
+.action-button:hover,
+.github-button:hover,
+.profile-button1:hover,
+.profile-button2:hover,
+.course-button:hover,
+.platform-button:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 10px 24px rgba(0,255,100,0.35);
+}
