@@ -24,6 +24,40 @@ body {
 /* Matrix GIF Background disabled for pure canvas effect */
 .background { display: none !important; }
 
+/* Gradient Network Connection Background (CSS-only) */
+.use-gradient-network .background {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    /* layered gradients: base dark gradient + criss-cross lines + soft glow spots */
+    background-image:
+        radial-gradient(circle at 18% 30%, rgba(0, 255, 170, 0.18), transparent 38%),
+        radial-gradient(circle at 78% 62%, rgba(0, 255, 0, 0.14), transparent 42%),
+        radial-gradient(circle at 86% 22%, rgba(255, 200, 0, 0.10), transparent 34%),
+        linear-gradient(115deg, #030b10 0%, #071a22 38%, #091d15 68%, #141809 100%),
+        repeating-linear-gradient(60deg, rgba(0, 255, 160, 0.085) 0 1px, transparent 1px 58px),
+        repeating-linear-gradient(120deg, rgba(0, 210, 255, 0.07) 0 1px, transparent 1px 58px);
+    background-blend-mode: screen, screen, screen, normal, overlay, overlay;
+}
+
+.use-gradient-network .background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* dotted nodes overlay */
+    background-image: radial-gradient(rgba(0, 255, 160, 0.20) 1px, transparent 1.2px);
+    background-size: 64px 64px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* Hide the matrix canvas when gradient network background is active */
+.use-gradient-network #matrix-canvas { display: none !important; }
+
 /* Subtle CRT scanlines overlay */
 .scanlines::before {
     content: "";
