@@ -21,8 +21,17 @@ body {
     pointer-events: none;
 }
 
-/* Matrix GIF Background disabled for pure canvas effect */
-.background { display: none !important; }
+/* GIF Background (enabled when using .use-gif-bg on body) */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('images/matrix.gif') center/cover no-repeat fixed;
+    opacity: 0.6; /* subtle so content stays readable */
+    z-index: -2;
+}
 
 /* Subtle CRT scanlines overlay */
 .scanlines::before {
@@ -1468,3 +1477,6 @@ footer p {
     60% { opacity: 1; transform: translateY(0) scale(1.02); text-shadow: 0 0 16px rgba(0,255,140,0.5); }
     100% { opacity: 1; transform: translateY(0) scale(1); text-shadow: 0 0 8px rgba(0,255,140,0.35); }
 }
+
+/* If body has .use-gif-bg, hide the canvas rain layer */
+.use-gif-bg #matrix-canvas { display: none !important; }
