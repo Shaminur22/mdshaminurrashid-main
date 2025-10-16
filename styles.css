@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 /* General Styles */
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Share Tech Mono', 'Roboto Mono', monospace;
     color: #00ff00;
     margin: 0;
     padding: 0;
@@ -372,24 +373,30 @@ footer p {
 .footer-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .footer-button {
     padding: 10px 20px;
-    background: #00ff00; /* Matrix green */
-    color: #000; /* Black text */
+    background: #00ff00;
+    color: #000;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 800;
     text-decoration: none;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .footer-button:hover {
-    background: #009900; 
+    background: #24e06d;
+    color: #061d06;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,255,100,0.25);
 }
 
 
@@ -468,21 +475,23 @@ footer p {
     margin: 0;
 }
 
+/* Unify image-card button hover contrast */
 .image-card button {
-    background-color: #00ff00;
-    color: rgb(0, 0, 0);
+    background-color: #00ff66;
+    color: #071b07;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
     margin: 15px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
-
 .image-card button:hover {
-    background-color: #50db3d;
-    color:white;
+    background-color: #24e06d;
+    color:#061d06;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,255,100,0.25);
 }
 
 /* Back to Home Button Container */
@@ -503,11 +512,16 @@ footer p {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .back-to-home:hover{
-    color:#00ff00;
+    background: #00cc44;
+    color: #051b05; /* keep text readable */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,255,100,0.25);
 }
 
 .back-to-about:hover {
@@ -532,15 +546,39 @@ footer p {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .back-to-about:hover {
-    background: #00cc00;
+    background: #00cc44;
+    color: #051b05; /* keep text readable */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,255,100,0.25);
 }
 
 .spacer {
     margin: 40px 0; 
+}
+
+/* Button layout helpers */
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.button-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+@media (max-width: 600px) {
+    .button-row { gap: 12px; }
+    .button-col { gap: 10px; }
 }
 
 /*------------------------------------------------------programming page css-------------------------------------------------*/
