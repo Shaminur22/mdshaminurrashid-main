@@ -1,9 +1,9 @@
 # Md.Shaminur Rashid's Portfolio Website
 ✨ Welcome to my personal portfolio website repository! This is where I showcase my skills, projects, and professional journey.
 
-[![Live Demo]([https://mdshaminurrashid-main.vercel.app/](https://mdshaminurrashid-main.vercel.app/index.html))
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://mdshaminurrashid-main.vercel.app/index.html)
 
-## Live Demo Link: https://mdshaminurrashid.vercel.app/index.html
+## Live Demo Link: https://mdshaminurrashid-main.vercel.app/index.html
 
 ## 🛠 Technologies Used
 -  **HTML, CSS, JavaScript**
